@@ -1,0 +1,39 @@
+# ── OUTPUT RAIL 1: Grounding check ────────────────────────────────────────
+# Catch responses that admit they don't know or are guessing
+
+define bot answer ungrounded
+  "I don't have information about that"
+  "I'm not sure about the exact specification"
+  "I cannot find that in my knowledge"
+  "as an AI language model"
+  "based on my general knowledge"
+  "I think the answer might be"
+  "I believe it could be"
+  "you might want to check"
+
+define bot clarify ungrounded answer
+  "I could not find a verified answer in the approved factory documents. Please consult your supervisor or refer to the original manual directly. Do not rely on unverified specifications."
+
+define flow check answer grounded
+  bot answer ungrounded
+  bot clarify ungrounded answer
+
+
+# ── OUTPUT RAIL 2: Unsafe output detector ─────────────────────────────────
+# Catch responses that contain dangerous instructions
+
+define bot give unsafe instruction
+  "bypass the safety"
+  "remove the guard"
+  "disable the interlock"
+  "override the emergency stop"
+  "exceed the maximum pressure"
+  "skip the lockout"
+
+define bot refuse unsafe output
+  "I cannot provide that information as it involves bypassing safety controls. Please contact your safety supervisor."
+
+define flow check unsafe output
+  bot give unsafe instruction
+  bot refuse unsafe output
+

@@ -1,0 +1,29 @@
+# NeMo Guardrails — Manufacturing Safety Oracle
+# This file wires together the LLM, the Colang rail files,
+# and sets the guardrail behaviour mode.
+
+models:
+  - type: main
+    engine: groq
+    model: llama-3.1-8b-instant
+
+rails:
+  input:
+    flows:
+      - check manufacturing topic
+      - check prompt injection
+      - check unsafe request
+
+  output:
+    flows:
+      - check answer grounded
+      - check unsafe output
+
+instructions:
+  - type: general
+    content: |
+      You are the Manufacturing Safety Oracle, an internal assistant
+      for factory floor workers. You only answer questions about
+      manufacturing equipment, safety procedures, maintenance,
+      and factory operations. You never answer off-topic questions.
+
