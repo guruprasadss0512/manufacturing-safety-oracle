@@ -21,7 +21,7 @@ An internal AI chatbot for factory floor workers that provides **exact specifica
 
 ## 📺 Watch the Full Build
 
-> **YouTube:** [Hustle with AI — Episode 3: Manufacturing Safety Oracle](https://www.youtube.com/@HustleWithAI)
+> **YouTube:** [Hustle with AI — Episode 3: Manufacturing Safety Oracle](https://www.youtube.com/@GuruPrasadSS-hustlewithai)
 > **LinkedIn:** [Guru Prasad](https://www.linkedin.com/in/guru-prasad-ss/)
 
 ---
