@@ -669,7 +669,7 @@ httpcore==1.0.5
 
 ## 🤝 Connect & Support
 
-- **YouTube:** [Hustle with AI](https://www.youtube.com/@HustleWithAI) — new AI project builds every week
+- **YouTube:** [Hustle with AI](https://www.youtube.com/@GuruPrasadSS-hustlewithai) — new AI project builds every week
 - **LinkedIn:** [Guru Prasad](https://www.linkedin.com/in/guru-prasad-ss/) — connect for setup help
 - **GitHub Issues:** Open an issue if you hit a problem not covered in troubleshooting
 
